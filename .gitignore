@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 데이터 파일 (용량 큰 것들)
+data/*.mp4
+data/*.avi
+data/*.mov
+*.mp4
+*.avi
+
+# 결과 이미지 (많이 생성될 것)
+test_output.jpg
+output/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# 환경 변수
+.env
