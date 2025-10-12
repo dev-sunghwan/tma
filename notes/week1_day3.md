@@ -120,3 +120,75 @@ OpenCV로 영상을 읽고 정보를 추출하는 것이 생각보다 간단했�
 앞으로 할 일이 많아 보인다. 하지만 첫 프레임을 저장하는 순간
 뭔가 프로젝트가 구체화되는 느낌이 들었다.
 내일은 색상 기반으로 테니스 공을 찾는 첫 시도를 해볼 예정!
+
+
+---
+
+## Part 2: GitHub에 업로드
+
+### Step 1: GitHub에서 새 저장소 생성
+
+1. https://github.com 접속 및 로그인
+2. 우측 상단 `+` → `New repository` 클릭
+3. 저장소 설정:
+   - **Repository name**: `tennis-match-analyzer`
+   - **Description**: `Tennis match video analysis using Computer Vision`
+   - **Public** 선택 (포트폴리오용)
+   - ❌ "Add a README file" 체크 해제 (이미 있음)
+   - ❌ "Add .gitignore" 체크 해제 (이미 있음)
+4. `Create repository` 클릭
+
+### Step 2: 로컬에서 GitHub 연결
+```bash
+# 프로젝트 루트에서
+cd ~/Documents/tma
+
+# Day 3 노트 추가
+git add notes/week1_day3.md
+git commit -m "Add Day 3 learning notes"
+
+# GitHub 원격 저장소 연결 (GitHub에서 보여주는 URL 사용)
+git remote add origin https://github.com/[YOUR_USERNAME]/tennis-match-analyzer.git
+
+# 원격 저장소 확인
+git remote -v
+
+# main 브랜치로 이름 변경 (필요시)
+git branch -M main
+
+# GitHub에 푸시
+git push -u origin main
+
+### Step 3: 푸시 시 인증
+GitHub에서 비밀번호 대신 Personal Access Token 필요:
+
+GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+Generate new token (classic) 클릭
+Note: tennis-analyzer-token
+Expiration: 90 days 선택
+Scopes: repo 체크
+Generate token 클릭
+토큰 복사 (다시 볼 수 없으니 안전한 곳에 저장!)
+
+푸시 시 Username과 Password 물으면:
+
+Username: GitHub 사용자명
+Password: 방금 복사한 토큰 붙여넣기
+
+전체 실행 순서
+```
+# 1. 노트 파일 생성
+nano notes/week1_day3.md
+# (위 내용 붙여넣기)
+
+# 2. Git 커밋
+git add notes/week1_day3.md
+git commit -m "Add Day 3 learning notes"
+
+# 3. GitHub 저장소 생성 (웹에서)
+
+# 4. 원격 연결 및 푸시
+git remote add origin https://github.com/[YOUR_USERNAME]/tennis-match-analyzer.git
+git branch -M main
+git push -u origin main
+```

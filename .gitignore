@@ -31,3 +31,10 @@ output/
 
 # 환경 변수
 .env
+
+# 생성된 테스트 이미지들
+data/test_*.jpg
+data/first_frame.jpg
+data/frames/
+data/analysis/
+data/quick_test/
