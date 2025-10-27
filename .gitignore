@@ -17,6 +17,7 @@ data/*.avi
 data/*.mov
 *.mp4
 *.avi
+*.mov
 
 # 결과 이미지 (많이 생성될 것)
 test_output.jpg
@@ -32,9 +33,9 @@ output/
 # 환경 변수
 .env
 
-# 생성된 테스트 이미지들
-data/test_*.jpg
-data/first_frame.jpg
-data/frames/
-data/analysis/
-data/quick_test/
+# 모든 결과 폴더 (더 깔끔!)
+data/*/
+
+# 하지만 data 폴더 자체는 유지
+!data/.gitkeep
+data/*.jpg
